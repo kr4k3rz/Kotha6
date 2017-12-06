@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "377134327014",
+    "firebase_url": "https://kotha6-6b370.firebaseio.com",
+    "project_id": "kotha6-6b370",
+    "storage_bucket": "kotha6-6b370.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377134327014:android:0d523cc2a1a344c4",
+        "android_client_info": {
+          "package_name": "com.codelite.kr4k3rz.kotha6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377134327014-4qappsjihmkj3a38ac34ic6jrmpcih40.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codelite.kr4k3rz.kotha6",
+            "certificate_hash": "27babc1960a5d942033f2b78bb27f7cff217fe1d"
+          }
+        },
+        {
+          "client_id": "377134327014-utvgfob8jk42jm53g7ni92q37qoivfkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codelite.kr4k3rz.kotha6",
+            "certificate_hash": "e682753d1f9536391a87d8692b61ad4ca3b935ca"
+          }
+        },
+        {
+          "client_id": "377134327014-2iaimiatfdvtmm3h9hn9cgu1ar0k2p08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codelite.kr4k3rz.kotha6",
+            "certificate_hash": "7a8f9746ebdbe5e8651361f9d15ee10ce2f802fc"
+          }
+        },
+        {
+          "client_id": "377134327014-bolth4v5hdc01i69pp0p0tdnqk73bl7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjgiyCsNG1Okj_xTGG60qKpPF5tw1j_aI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377134327014-bolth4v5hdc01i69pp0p0tdnqk73bl7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

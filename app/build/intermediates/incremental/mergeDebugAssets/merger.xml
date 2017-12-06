@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3">
+    <dataSet config="com.github.medyo:fancybuttons:1.8.4">
+        <source
+            path="/home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/fancybuttons-1.8.4.aar/4abe9996f22a7d5464d33a4361fa71ff/assets">
+            <file name="fonts/Google Android License.txt.txt"
+                path="/home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/fancybuttons-1.8.4.aar/4abe9996f22a7d5464d33a4361fa71ff/assets/fonts/Google Android License.txt.txt" />
+            <file name="fonts/robotoregular.ttf"
+                path="/home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/fancybuttons-1.8.4.aar/4abe9996f22a7d5464d33a4361fa71ff/assets/fonts/robotoregular.ttf" />
+            <file name="fonts/fontawesome.ttf"
+                path="/home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/fancybuttons-1.8.4.aar/4abe9996f22a7d5464d33a4361fa71ff/assets/fonts/fontawesome.ttf" />
+        </source>
+    </dataSet>
+    <dataSet config="main">
+        <source path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/assets">
+            <file name="fonts/Roboto-Regular.ttf"
+                path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/assets/fonts/Roboto-Regular.ttf" />
+            <file name="fonts/Rubik-Regular.ttf"
+                path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/assets/fonts/Rubik-Regular.ttf" />
+            <file name="fonts/Ubuntu-Regular.ttf"
+                path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/assets/fonts/Ubuntu-Regular.ttf" />
+        </source>
+        <source
+            path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/build/generated/assets/shaders/debug" />
+    </dataSet>
+    <dataSet config="debug">
+        <source path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/debug/assets" />
+    </dataSet>
+</merger>

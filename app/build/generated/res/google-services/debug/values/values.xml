@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">377134327014-bolth4v5hdc01i69pp0p0tdnqk73bl7f.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://kotha6-6b370.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">377134327014</string>
+    <string name="google_api_key" translatable="false">AIzaSyDjgiyCsNG1Okj_xTGG60qKpPF5tw1j_aI</string>
+    <string name="google_app_id" translatable="false">1:377134327014:android:0d523cc2a1a344c4</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDjgiyCsNG1Okj_xTGG60qKpPF5tw1j_aI</string>
+    <string name="google_storage_bucket" translatable="false">kotha6-6b370.appspot.com</string>
+    <string name="project_id" translatable="false">kotha6-6b370</string>
+</resources>

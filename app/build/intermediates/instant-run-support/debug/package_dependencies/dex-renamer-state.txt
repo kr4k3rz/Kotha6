@@ -1,0 +1,4 @@
+#Thu Nov 30 17:38:37 NPT 2017
+base.0=/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/build/intermediates/transforms/dexMerger/debug/11
+path.0=classes.dex
+renamed.0=classes.dex

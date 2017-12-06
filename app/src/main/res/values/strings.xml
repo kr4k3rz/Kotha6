@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Kotha6</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="auth_failed">authentication failed</string>
+    <string name="loading">loading</string>
+    <string name="apps_logo">Apps Logo</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="already_a_member_login">Already a member? Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="transition_string">hello</string>
+    <string name="no_account_yet_create_one">No account yet? Create one</string>
+
+    <string-array name="property_entries">
+        <item>Individual House</item>
+        <item>Apartment</item>
+        <item>Plot</item>
+        <item>Shop</item>
+    </string-array>
+
+
+    <string-array name="room_size">
+        <item>1BHK</item>
+        <item>2BHK</item>
+        <item>3BHK</item>
+        <item>4BHK</item>
+        <item>5BHK</item>
+        <item>6BHK</item>
+        <item>7BHK</item>
+        <item>8BHK</item>
+    </string-array>
+
+    <string-array name="city_entries">
+        <item>Kathmandu</item>
+        <item>Pokhara</item>
+        <item>Butwal</item>
+        <item>Nepalgunj</item>
+        <item>Bhairahawa</item>
+        <item>Taulihawa</item>
+        <item>Patan</item>
+        <item>Parasi</item>
+        <item>Gorahi</item>
+        <item>Dang</item>
+    </string-array>
+
+    <string-array name="fragments_select">
+        <item>Photos &amp; Location</item>
+        <item>Price &amp; Availability</item>
+        <item>Amenities &amp; Rules</item>
+        <item>Room Description</item>
+        <item>Preview</item>
+    </string-array>
+
+
+    <string name="terms_and_conditions">By entering I accept T &amp; C and Privacy Policy<a href="mailto:support@cleverfinger.com.au?Subject=Lost%20Password" target="_top" /></string>
+    <string name="profile_image">profile_image</string>
+    <string name="edit_profile">edit</string>
+    <string name="drawer_item_home">home</string>
+    <string name="drawer_item_settings">settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="basic_info">Basic Information</string>
+
+
+    <string name="photos_location">Photos &amp; Location</string>
+    <string name="photos">Photos</string>
+    <string name="property_details">Property Details</string>
+    <string name="review">review</string>
+    <string name="spinner_title">Select</string>
+    <string name="room_price_availability">Price &amp; Availability</string>
+    <string name="room_amenities_rules">Amenities &amp; Rules</string>
+    <string name="room_desc">Room Description</string>
+    <string name="preview">Preview</string>
+    <string name="home">Home</string>
+    <string name="fab">Fab</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_detail_listing">DetailListingActivity</string>
+
+</resources>

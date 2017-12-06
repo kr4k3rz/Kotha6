@@ -1,0 +1,18 @@
+[
+  {
+    "outputType": {
+      "type": "INSTANT_RUN_MERGED_MANIFESTS"
+    },
+    "apkInfo": {
+      "type": "MAIN",
+      "splits": [],
+      "versionCode": 1
+    },
+    "path": "AndroidManifest.xml",
+    "properties": {
+      "packageId": "com.codelite.kr4k3rz.kotha6",
+      "split": "",
+      "minSdkVersion": "15"
+    }
+  }
+]
