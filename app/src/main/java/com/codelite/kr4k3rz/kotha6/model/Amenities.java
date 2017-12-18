@@ -1,6 +1,8 @@
 package com.codelite.kr4k3rz.kotha6.model;
 
-public class Amenities {
+import java.io.Serializable;
+
+public class Amenities implements Serializable {
     private boolean Wifi;
     private boolean Parking;
     private boolean Smoking;

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codelite.kr4k3rz.kotha6"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -22,6 +22,7 @@
     <uses-permission android:name="com.codelite.kr4k3rz.kotha6.permission.C2D_MESSAGE" />
 
     <application
+        android:name="com.codelite.kr4k3rz.kotha6.MyFirebaseApp"
         android:allowBackup="true"
         android:debuggable="true"
         android:fullBackupContent="@xml/backup_descriptor"
@@ -30,10 +31,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar" >
         <activity
             android:name="com.codelite.kr4k3rz.kotha6.Application"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,10 +42,24 @@
             </intent-filter>
         </activity>
         <activity android:name="com.codelite.kr4k3rz.kotha6.HomeActivity" />
-        <activity android:name="com.codelite.kr4k3rz.kotha6.LoginActivity" />
+        <activity android:name="com.codelite.kr4k3rz.kotha6.view.Login.LoginActivity" />
         <activity android:name="com.codelite.kr4k3rz.kotha6.ListRoomActivity" />
-        <activity android:name="com.codelite.kr4k3rz.kotha6.SignupActivity" />
+        <activity android:name="com.codelite.kr4k3rz.kotha6.view.Login.SignupActivity" />
         <activity android:name="com.codelite.kr4k3rz.kotha6.PreviewActivity" />
+        <activity
+            android:name="com.codelite.kr4k3rz.kotha6.SearchableActivity"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.codelite.kr4k3rz.kotha6.FilterActivity"
+            android:theme="@style/AppTheme" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -54,7 +69,7 @@
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.codelite.kr4k3rz.kotha6.easyphotopicker.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
@@ -68,12 +83,13 @@
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
-            android:exported="false"></receiver>
+            android:exported="false" >
+        </receiver>
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
             android:enabled="true"
             android:exported="true"
-            android:permission="android.permission.INSTALL_PACKAGES">
+            android:permission="android.permission.INSTALL_PACKAGES" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
@@ -92,7 +108,7 @@
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
@@ -105,8 +121,8 @@
         -->
         <service
             android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-            android:exported="true">
-            <intent-filter android:priority="-500">
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>

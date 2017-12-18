@@ -1,34 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/main_card_margin_vertical"
+    android:layout_marginEnd="@dimen/main_card_margin_horizontal"
+    android:layout_marginStart="@dimen/main_card_margin_horizontal"
+    android:layout_marginTop="@dimen/main_card_margin_vertical"
+    android:background="?attr/selectableItemBackground"
+    android:clipToPadding="true"
+    android:foreground="?attr/selectableItemBackground">
 
-    <ImageView
-        android:id="@+id/imageRoom"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@color/grey_300" />
-
-    <TextView
-        android:id="@+id/rentAmt"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:layout_toEndOf="@+id/imageRoom"
-        android:layout_toRightOf="@+id/imageRoom"
-        android:text="2600/month" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/availableFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rentAmt"
-        android:layout_margin="6dp"
-        android:layout_toEndOf="@+id/imageRoom"
-        android:layout_toRightOf="@+id/imageRoom"
-        android:text="5/7/2017" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
 
-</RelativeLayout>
+            <ImageView
+                android:id="@+id/imageRoom"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mountain"
+                tools:ignore="ContentDescription" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bg">
+
+                <TextView
+                    android:id="@+id/rentAmt"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/card_title_margin"
+                    android:text="रु.2600"
+                    android:textColor="@color/white" />
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_button_margin">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawableStart="@drawable/ic_location"
+                android:text="taulihawa-2,kapilvastu,Nepal" />
+
+            <TextView
+                android:id="@+id/availableFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_truck_fast"
+                android:drawableStart="@drawable/ic_truck_fast"
+                android:text=" 18 Dec." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
 

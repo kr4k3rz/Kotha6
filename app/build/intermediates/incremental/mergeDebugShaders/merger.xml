@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3">
-    <dataSet config="main">
-        <source path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/shaders" />
-    </dataSet>
-    <dataSet config="debug">
-        <source path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/debug/shaders" />
-    </dataSet>
-</merger>
+<merger version="3"><dataSet config="main"><source path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/debug/shaders"/></dataSet></merger>

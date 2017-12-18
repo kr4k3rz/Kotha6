@@ -1,17 +1,22 @@
 package com.codelite.kr4k3rz.kotha6.fragments;
 
 
-import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,7 +30,6 @@ import com.codelite.kr4k3rz.kotha6.holer.RoomListHolder;
 import com.codelite.kr4k3rz.kotha6.model.Room;
 import com.codelite.kr4k3rz.kotha6.model.Users;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,36 +42,33 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.File;
+import java.io.IOException;
+
+import id.zelory.compressor.Compressor;
 import io.paperdb.Paper;
+import pl.aprilapps.easyphotopicker.DefaultCallback;
+import pl.aprilapps.easyphotopicker.EasyImage;
 
 import static com.google.firebase.auth.FirebaseAuth.getInstance;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProfileFragment extends Fragment {
-    public static final int GET_FROM_GALLERY = 3;
-    Uri selectedImage;
-    ImageView profileImageView;
-    ProgressBar progressBar;
+    ImageView mProfile;
+    ProgressBar mProgressBar;
 
-    FirebaseRecyclerAdapter adapter;
+    FirebaseRecyclerAdapter mAdapter;
+    TextView mFirstName, mLastName, mPhone, mEmailAddress;
+    FloatingActionButton mFabList;
+    StorageReference mProfileRef;
+    View rootView;
 
-    TextView _firstName, _lastName, _phoneNumber, _emailAddress;
-    FloatingActionButton fab_addListing;
-
-    private FirebaseAuth mAuth;
-    private StorageReference mStorageRef;
-    StorageReference riversRef;
-
-
-    private RecyclerView recyclerView;
-
+    FirebaseAuth mAuth = getInstance();
+    FirebaseUser user = getInstance().getCurrentUser();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference mUserRef = database.getReference().child("users").child(mAuth.getCurrentUser().getUid());
 
     public ProfileFragment() {
-        // Required empty public constructor
-        selectedImage = null;
+
     }
 
     public static ProfileFragment newInstance() {
@@ -75,51 +76,107 @@ public class ProfileFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
-        recyclerView = rootView.findViewById(R.id.recyclerViewLists);
-        recyclerView.setHasFixedSize(false);
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        final RecyclerView recyclerView = rootView.findViewById(R.id.recyclerViewLists);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
 
-       /* FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-        DatabaseReference myRef = database.getReference("users/" + mAuth.getCurrentUser().getUid()).child("rooms");*/
-
-
-        _firstName = rootView.findViewById(R.id.firstName);
-        _lastName = rootView.findViewById(R.id.lastName);
-        profileImageView = rootView.findViewById(R.id.profileImage);
-        _phoneNumber = rootView.findViewById(R.id.phoneNumber);
-        _emailAddress = rootView.findViewById(R.id.emailAddress);
-        progressBar = rootView.findViewById(R.id.pr_progressbar);
-        fab_addListing = rootView.findViewById(R.id.floating_action_button);
-
-        FirebaseUser user = getInstance().getCurrentUser();
-        mAuth = getInstance();
-        mStorageRef = FirebaseStorage.getInstance().getReference();
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("users/" + mAuth.getCurrentUser().getUid());
-
-        riversRef = mStorageRef.child("profiles/" + mAuth.getCurrentUser().getUid());
+        mFirstName = rootView.findViewById(R.id.firstName);
+        mLastName = rootView.findViewById(R.id.lastName);
+        mProfile = rootView.findViewById(R.id.profileImage);
+        mPhone = rootView.findViewById(R.id.phoneNumber);
+        mEmailAddress = rootView.findViewById(R.id.emailAddress);
+        mProgressBar = rootView.findViewById(R.id.pr_progressbar);
+        mFabList = rootView.findViewById(R.id.floating_action_button);
 
 
-        adapter = new FirebaseRecyclerAdapter<Room, RoomListHolder>(Room.class, R.layout.item_room_list, RoomListHolder.class, myRef.child("rooms")) {
+        mAdapter = new FirebaseRecyclerAdapter<Room, RoomListHolder>(Room.class, R.layout.item_room_list, RoomListHolder.class, mUserRef.child("posts")) {
             @Override
             protected void populateViewHolder(RoomListHolder viewHolder, Room model, int position) {
                 viewHolder.setRoomRent(model.getRent_amt());
                 viewHolder.setAvailableDate(model.getAvailable_date());
-                //Log.d("TAG", model.getAddress());
+                viewHolder.setRoomImg(getActivity(), model.getImg_urls().get(0));
+                viewHolder.setAddress(model.getAddress());
+                Log.d("TAG", "position : " + position);
+            }
+
+            @Override
+            public RoomListHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                RoomListHolder viewHolder = super.onCreateViewHolder(parent, viewType);
+                viewHolder.setOnClickListener(new RoomListHolder.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, final int position) {
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, final int position) {
+                        AlertDialog.Builder builder =
+                                new AlertDialog.Builder(getContext());
+                        builder.setTitle("Delete");
+                        builder.setMessage("Delete this Room Listing?");
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                mAdapter.getRef(position).addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        final Room room = dataSnapshot.getValue(Room.class);
+                                        assert room != null;
+                                        FirebaseDatabase.getInstance().getReference().child("rooms").orderByChild("uid").equalTo(room.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                    Room room1 = snapshot.getValue(Room.class);
+                                                    assert room1 != null;
+                                                    if (room1.getPostId().equals(room.getPostId())) {
+                                                        snapshot.getRef().removeValue();
+                                                        mAdapter.getRef(position).removeValue();
+
+                                                    }
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onCancelled(DatabaseError databaseError) {
+
+                                            }
+                                        });
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+                                });
+
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+                        builder.show();
+                    }
+                });
+                return viewHolder;
             }
         };
 
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(mAdapter);
 
-        fab_addListing.setOnClickListener(new View.OnClickListener() {
+        mFabList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ListRoomActivity.class);
@@ -127,78 +184,86 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        mProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EasyImage.openChooserWithGallery(ProfileFragment.this, "Choose the option", 3);
+            }
+        });
+
         if (user != null) {
-            selectedImage = Paper.book().read("profilePic");
-            Glide.with(getActivity())
-                    .load(selectedImage).into(profileImageView);
-
-            myRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    Users users = dataSnapshot.getValue(Users.class);
-                    _firstName.setText(users.getFirstName());
-                    _lastName.setText(users.getLastName());
-                    _phoneNumber.setText(users.getMobNum());
-                    _emailAddress.setText(users.getEmail());
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-
-            profileImageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivityForResult(new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI), GET_FROM_GALLERY);
-                }
-            });
-
+            loadUserProfile(mUserRef);
         }
-
         return rootView;
     }
 
+    private void loadUserProfile(DatabaseReference myRef) {
+
+        StorageReference mStorageRef = FirebaseStorage.getInstance().getReference();
+        mProfileRef = mStorageRef.child("profiles/" + mAuth.getCurrentUser().getUid());
+
+
+        if (Paper.book().exist("profile")) {
+            File savedImage = Paper.book().read("profile");
+            Glide.with(getContext())
+                    .load(savedImage).into(mProfile);
+        }
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Users users = dataSnapshot.getValue(Users.class);
+                mFirstName.setText(users.getFirstName());
+                mLastName.setText(users.getLastName());
+                mPhone.setText(users.getMobNum());
+                mEmailAddress.setText(users.getEmail());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Snackbar.make(rootView, "" + databaseError.getMessage(), Snackbar.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        mProgressBar.setVisibility(View.VISIBLE);
+        EasyImage.handleActivityResult(requestCode, resultCode, data, getActivity(), new DefaultCallback() {
+            @Override
+            public void onImagePicked(File imageFile, EasyImage.ImageSource source, int type) {
+                if (type == 3) {
+                    try {
+                        final File compressor = new Compressor(getContext()).compressToFile(imageFile);
+                        mProfileRef.putFile(Uri.fromFile(compressor)).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                Glide.with(getContext())
+                                        .load(compressor).into(mProfile);
+                                Paper.book().write("profile", compressor);
+                                mProgressBar.setVisibility(View.INVISIBLE);
+
+                            }
+                        });
 
 
-        //Detects request codes
-        if (requestCode == GET_FROM_GALLERY && resultCode == Activity.RESULT_OK) {
-            selectedImage = data.getData();
-            Log.d("TAG", "imageURi" + selectedImage);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
-            Glide.with(getActivity())
-                    .load(selectedImage).into(profileImageView);
-            Paper.book().write("profilePic", selectedImage);
+                }
+            }
+        });
+    }
 
-            /*Start to upload the Selected Image Profile*/
 
-            progressBar.setVisibility(View.VISIBLE);
-            riversRef.putFile(selectedImage)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            // Get a URL to the uploaded content
-                            // Uri downloadUrl = taskSnapshot.getDownloadUrl();
-                            //Log.d("TAG", taskSnapshot.getDownloadUrl() + "");
-                            progressBar.setVisibility(View.INVISIBLE);
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception exception) {
-                            // Handle unsuccessful uploads
-                            // ...
-                        }
-                    });
-
-        }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_ak, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
 }
+
+

@@ -2,6 +2,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -38,14 +39,15 @@
                     android:layout_weight="1"
                     android:text="Listings" />
 
-                <ImageButton
-                    android:id="@+id/imgBtn_done"
+                <Button
+                    android:id="@+id/actionDone"
                     style="@style/Widget.AppCompat.ActionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/fab_margin"
                     android:layout_marginRight="@dimen/fab_margin"
-                    app:srcCompat="@drawable/done_icon"
+                    android:text="NEXT"
+                    android:textStyle="bold"
                     tools:ignore="ContentDescription" />
 
             </LinearLayout>
@@ -59,10 +61,21 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/list_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-7dp"
+                android:indeterminate="true"
+                android:max="100"
+                android:visibility="invisible" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -104,9 +117,11 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:contentDescription="Bedroom"
-                            android:scaleType="centerCrop" />
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/ic_plus" />
 
                         <ImageView
+                            android:visibility="invisible"
                             android:id="@+id/select_img2"
                             android:layout_width="50dp"
                             android:layout_height="60dp"
@@ -117,6 +132,7 @@
                             android:scaleType="centerCrop" />
 
                         <ImageView
+                            android:visibility="invisible"
                             android:id="@+id/select_img3"
                             android:layout_width="50dp"
                             android:layout_height="60dp"
@@ -127,6 +143,7 @@
                             android:scaleType="centerCrop" />
 
                         <ImageView
+                            android:visibility="invisible"
                             android:id="@+id/select_img4"
                             android:layout_width="50dp"
                             android:layout_height="60dp"

@@ -37,15 +37,75 @@
 
     <string-array name="city_entries">
         <item>Kathmandu</item>
-        <item>Pokhara</item>
-        <item>Butwal</item>
+        <item>Pokhara Lekhnath</item>
+        <item>Lalitpur</item>
+        <item>Bharatpur</item>
+        <item>Biratnagar</item>
+        <item>Bharatpur</item>
+        <item>Birgunj</item>
+        <item>Ghorahi</item>
+        <item>Janakpur</item>
+        <item>Hetauda</item>
+        <item>Dhangadhi</item>
+        <item>Tulsipur</item>
+        <item>Itahari</item>
         <item>Nepalgunj</item>
-        <item>Bhairahawa</item>
-        <item>Taulihawa</item>
-        <item>Patan</item>
-        <item>Parasi</item>
-        <item>Gorahi</item>
-        <item>Dang</item>
+        <item>Butwal</item>
+        <item>Dharan</item>
+        <item>Kalaiya</item>
+        <item>Jeetpur Simara</item>
+        <item>Mechinagar</item>
+        <item>Budhanilkantha</item>
+        <item>Gokarneshwor</item>
+        <item>Bheemdatta</item>
+        <item>Birendranagar</item>
+        <item>Tilottama</item>
+        <item>Tokha</item>
+        <item>Lahan</item>
+        <item>Triyuga</item>
+        <item>Chandragiri</item>
+        <item>Madhyapur Thimi</item>
+        <item>Siraha</item>
+        <item>Birtamod</item>
+        <item>Bhakptapur</item>
+        <item>Tarakeshor</item>
+        <item>Sundar Haraincha</item>
+        <item>Suryabinayak</item>
+        <item>Godawari,Lalitpur</item>
+        <item>Godawari,Kailali</item>
+        <item>Baraha</item>
+        <item>Tikapur</item>
+        <item>Kapilvastu</item>
+        <item>Ghodaghodi</item>
+        <item>Lamki Chuha</item>
+        <item>Banganga</item>
+        <item>Damak</item>
+    </string-array>
+
+    <string-array name="min_price">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="max_price">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
     </string-array>
 
     <string-array name="fragments_select">
@@ -80,5 +140,8 @@
     <string name="fab">Fab</string>
     <string name="profile">Profile</string>
     <string name="title_activity_detail_listing">DetailListingActivity</string>
+    <string name="action_search">Search</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
 
 </resources>

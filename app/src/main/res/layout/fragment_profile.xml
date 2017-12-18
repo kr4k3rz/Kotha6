@@ -1,6 +1,5 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,10 +11,10 @@
         <ProgressBar
             android:id="@+id/pr_progressbar"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-7dp"
             android:indeterminate="true"
+            android:layout_marginTop="-7dp"
             android:max="100"
             android:visibility="invisible" />
 
@@ -35,25 +34,11 @@
                 app:civ_border_color="@color/grey_300"
                 app:civ_border_width="2dp" />
 
-            <Button
-                android:id="@+id/editProfile"
-                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/profileImage"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignRight="@+id/profileImage"
-                android:layout_below="@id/profileImage"
-                android:padding="8dp"
-                android:text="@string/edit_profile" />
-
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/editProfile"
                 android:layout_marginBottom="14dp"
                 android:layout_toEndOf="@+id/profileImage"
                 android:layout_toRightOf="@+id/profileImage"
@@ -116,7 +101,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewLists"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="vertical" />
 
     </LinearLayout>

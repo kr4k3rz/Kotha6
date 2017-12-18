@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
 MERGED from [com.android.support:design:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6473160a055a2eb7e0239bb6f5c8cb54/AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui-database:1.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.1.0.aar/5ccb6141d9bb852931d3eec242d7b3de/AndroidManifest.xml:2:1-19:12
 MERGED from [com.github.firdausmaulan:GlideSlider:1.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/GlideSlider-1.0.2.aar/a06aa4a6390618491de900e1f24b8677/AndroidManifest.xml:2:1-14:12
@@ -30,6 +30,7 @@ MERGED from [de.hdodenhof:circleimageview:2.1.0] /home/kr4k3rz/.gradle/caches/tr
 MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/searchablespinnerlibrary-1.3.1.aar/d4b74ecf6ad316ac65f9ee94aca1b0f9/AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.medyo:fancybuttons:1.8.4] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/fancybuttons-1.8.4.aar/4abe9996f22a7d5464d33a4361fa71ff/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android:flexbox:0.3.1] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.1.aar/5947c04cf4c9592fbcddc0788c19fe24/AndroidManifest.xml:17:1-27:12
+MERGED from [id.zelory:compressor:2.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/compressor-2.1.0.aar/689d770605e9ac5e1f81ac270079466e/AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:transition:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/95b9bad81cbb4ad084b08ff492fbc71e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/f3a7b98b089210cea59cb745bbc4fd50/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/3a8fa22f6a0cdc7a0aaa0a2e6f770db5/AndroidManifest.xml:17:1-22:12
@@ -52,25 +53,25 @@ MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/k
 MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/1375af0ffdb8cde03cc694e7b5c528dc/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-database-connection-license:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.6.2.aar/626c8f6b89cb9f3b01449d3f4d9918ae/AndroidManifest.xml:2:1-6:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/0f8b3b88e5937b06c2d56f135725dd1d/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:3:5-42
 		INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:5:5-67
 MERGED from [com.firebaseui:firebase-ui-database:1.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.1.0.aar/5ccb6141d9bb852931d3eec242d7b3de/AndroidManifest.xml:11:5-67
 MERGED from [com.firebaseui:firebase-ui-database:1.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.1.0.aar/5ccb6141d9bb852931d3eec242d7b3de/AndroidManifest.xml:11:5-67
 MERGED from [com.github.firdausmaulan:GlideSlider:1.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/GlideSlider-1.0.2.aar/a06aa4a6390618491de900e1f24b8677/AndroidManifest.xml:11:5-67
@@ -82,19 +83,29 @@ MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/kr4k3rz/.
 MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/f7dab45863bce54b257eda0b0ea5a7a2/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/f7dab45863bce54b257eda0b0ea5a7a2/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:5:5-81
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:6:5-81
 MERGED from [com.github.firdausmaulan:GlideSlider:1.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/GlideSlider-1.0.2.aar/a06aa4a6390618491de900e1f24b8677/AndroidManifest.xml:12:5-81
 MERGED from [com.github.firdausmaulan:GlideSlider:1.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/GlideSlider-1.0.2.aar/a06aa4a6390618491de900e1f24b8677/AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:5:22-78
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:6:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:6:5-80
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:6:22-77
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:8:5-79
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/1a90a895365e3811ce85d4070325422f/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/1a90a895365e3811ce85d4070325422f/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/3c5f2ea9fb5f53ccc090a2d1c564a4c3/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/3c5f2ea9fb5f53ccc090a2d1c564a4c3/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/f7dab45863bce54b257eda0b0ea5a7a2/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/f7dab45863bce54b257eda0b0ea5a7a2/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:8:22-76
 application
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:8:5-29:19
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:10:5-46:19
 MERGED from [com.firebaseui:firebase-ui-database:1.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.1.0.aar/5ccb6141d9bb852931d3eec242d7b3de/AndroidManifest.xml:13:5-17:19
 MERGED from [com.firebaseui:firebase-ui-database:1.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.1.0.aar/5ccb6141d9bb852931d3eec242d7b3de/AndroidManifest.xml:13:5-17:19
 MERGED from [com.github.jkwiecien:EasyImage:1.3.1] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/EasyImage-1.3.1.aar/93d06b7e003f2e3795cb2ab261c28b28/AndroidManifest.xml:11:5-21:19
@@ -152,55 +163,81 @@ MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/kr4k3rz/.gra
 MERGED from [com.google.firebase:firebase-database-connection-license:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.6.2.aar/626c8f6b89cb9f3b01449d3f4d9918ae/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-database-connection-license:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.6.2.aar/626c8f6b89cb9f3b01449d3f4d9918ae/AndroidManifest.xml:5:5-20
 	android:supportsRtl
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:15:9-41
 	android:fullBackupContent
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:10:9-59
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:13:9-59
 	android:roundIcon
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:13:9-54
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:15:9-52
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:18:9-52
+	android:name
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:11:9-65
 activity#com.codelite.kr4k3rz.kotha6.Application
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:16:9-23:20
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:19:9-26:20
 	android:theme
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:18:13-47
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:21:13-47
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:17:13-40
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:20:13-40
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:19:13-22:29
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:22:13-25:29
 action#android.intent.action.MAIN
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:24:27-74
 activity#com.codelite.kr4k3rz.kotha6.HomeActivity
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:24:9-50
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:27:9-50
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:24:19-47
-activity#com.codelite.kr4k3rz.kotha6.LoginActivity
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:25:9-51
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:27:19-47
+activity#com.codelite.kr4k3rz.kotha6.view.Login.LoginActivity
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:28:9-62
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:25:19-48
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:28:19-59
 activity#com.codelite.kr4k3rz.kotha6.ListRoomActivity
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:26:9-54
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:29:9-54
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:26:19-51
-activity#com.codelite.kr4k3rz.kotha6.SignupActivity
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:27:9-52
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:29:19-51
+activity#com.codelite.kr4k3rz.kotha6.view.Login.SignupActivity
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:30:9-63
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:27:19-49
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:30:19-60
 activity#com.codelite.kr4k3rz.kotha6.PreviewActivity
-ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:28:9-53
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:31:9-53
 	android:name
-		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:28:19-50
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:31:19-50
+activity#com.codelite.kr4k3rz.kotha6.SearchableActivity
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:32:9-42:20
+	android:theme
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:34:13-44
+	android:name
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:33:13-47
+intent-filter#android.intent.action.SEARCH
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:35:13-37:29
+action#android.intent.action.SEARCH
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:36:17-71
+	android:name
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:36:25-68
+meta-data#android.app.searchable
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:39:13-41:54
+	android:resource
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:41:17-51
+	android:name
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:40:17-54
+activity#com.codelite.kr4k3rz.kotha6.FilterActivity
+ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:43:9-45:47
+	android:theme
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:45:13-44
+	android:name
+		ADDED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml:44:13-43
 uses-sdk
 INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/kr4k3rz/AndroidStudioProjects/Kotha6/app/src/main/AndroidManifest.xml
@@ -257,6 +294,8 @@ MERGED from [com.github.medyo:fancybuttons:1.8.4] /home/kr4k3rz/.gradle/caches/t
 MERGED from [com.github.medyo:fancybuttons:1.8.4] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/fancybuttons-1.8.4.aar/4abe9996f22a7d5464d33a4361fa71ff/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android:flexbox:0.3.1] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.1.aar/5947c04cf4c9592fbcddc0788c19fe24/AndroidManifest.xml:23:5-25:41
 MERGED from [com.google.android:flexbox:0.3.1] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.1.aar/5947c04cf4c9592fbcddc0788c19fe24/AndroidManifest.xml:23:5-25:41
+MERGED from [id.zelory:compressor:2.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/compressor-2.1.0.aar/689d770605e9ac5e1f81ac270079466e/AndroidManifest.xml:8:5-10:41
+MERGED from [id.zelory:compressor:2.1.0] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/compressor-2.1.0.aar/689d770605e9ac5e1f81ac270079466e/AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:transition:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/95b9bad81cbb4ad084b08ff492fbc71e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/95b9bad81cbb4ad084b08ff492fbc71e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.0.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/f3a7b98b089210cea59cb745bbc4fd50/AndroidManifest.xml:20:5-44
@@ -343,14 +382,6 @@ ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/kr4k3rz/.gra
 		ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/98057dab3b649f551ab3231a7dabad71/AndroidManifest.xml:19:86-145
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/98057dab3b649f551ab3231a7dabad71/AndroidManifest.xml:19:19-85
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/1a90a895365e3811ce85d4070325422f/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/3c5f2ea9fb5f53ccc090a2d1c564a4c3/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/3c5f2ea9fb5f53ccc090a2d1c564a4c3/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/f7dab45863bce54b257eda0b0ea5a7a2/AndroidManifest.xml:19:5-78
-MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/f7dab45863bce54b257eda0b0ea5a7a2/AndroidManifest.xml:19:5-78
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/1a90a895365e3811ce85d4070325422f/AndroidManifest.xml:21:22-76
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/1a90a895365e3811ce85d4070325422f/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/kr4k3rz/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/3c5f2ea9fb5f53ccc090a2d1c564a4c3/AndroidManifest.xml:22:5-67

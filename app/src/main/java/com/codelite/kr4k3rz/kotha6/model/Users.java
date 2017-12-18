@@ -1,7 +1,9 @@
 package com.codelite.kr4k3rz.kotha6.model;
 
 
-public class Users {
+import java.io.Serializable;
+
+public class Users implements Serializable {
     private String firstName;
     private String lastName;
     private String photoUrl;

@@ -3,9 +3,10 @@ package com.codelite.kr4k3rz.kotha6;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -15,25 +16,25 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.codelite.kr4k3rz.kotha6.model.Room;
 import com.glide.slider.library.SliderLayout;
 import com.glide.slider.library.SliderTypes.DefaultSliderView;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-import io.paperdb.Paper;
 import mehdi.sakout.fancybuttons.FancyButton;
 
 public class PreviewActivity extends AppCompatActivity {
-    String TAG = PreviewActivity.class.getSimpleName();
-    Room room = Paper.book().read("ROOM");
     TextView mRoomAmt, mAvailableFrom, mAddress, mDesc;
     ImageView mWifi, mParking, mSmoking, mParty, mPets;
     FancyButton mMen, mWomen, mCouple, mStudents, mProfessionals;
-    SliderLayout sliderLayout;
-    FloatingActionButton fab_upload;
-    ProgressBar progressBar;
+    SliderLayout mSliderLayout;
+    FloatingActionButton mFabUpload;
+    ProgressBar mProgressBar;
+    CoordinatorLayout layout;
 
+    Room room;
     private FirebaseAuth mAuth;
 
 
@@ -41,8 +42,11 @@ public class PreviewActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview);
-        sliderLayout = findViewById(R.id.slider);
-        fab_upload = findViewById(R.id.fab_upload);
+        mSliderLayout = findViewById(R.id.slider);
+        mFabUpload = findViewById(R.id.fab_upload);
+        layout = findViewById(R.id.main_content);
+        room = (Room) getIntent().getSerializableExtra("ROOM");
+
         ArrayList<String> mImageUrl = room.getImg_urls();
         mRoomAmt = findViewById(R.id.set_rent_amt);
         mAvailableFrom = findViewById(R.id.set_available_date);
@@ -52,7 +56,7 @@ public class PreviewActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        progressBar = findViewById(R.id.progressbar);
+        mProgressBar = findViewById(R.id.progressbar);
 
         mWifi = findViewById(R.id.iv_wifi);
         mParking = findViewById(R.id.iv_parking);
@@ -66,17 +70,33 @@ public class PreviewActivity extends AppCompatActivity {
         mStudents = findViewById(R.id.btn_student);
         mProfessionals = findViewById(R.id.btn_professional);
 
-
-        fab_upload.setOnClickListener(new View.OnClickListener() {
+        mFabUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressBar.setVisibility(View.VISIBLE);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("users/" + mAuth.getCurrentUser().getUid());
-                DatabaseReference roomsRef = database.getReference("rooms/" + mAuth.getCurrentUser().getUid());
-                myRef.child("rooms").push().setValue(room);
-                roomsRef.push().setValue(room);
-                finish();
+
+                if (UtilHelper.isOnline(getApplicationContext())) {
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference mUserRef = database.getReference().child("users").child(mAuth.getCurrentUser().getUid());
+                    room.setUid(mAuth.getCurrentUser().getUid());
+                    room.setPostId(String.valueOf(System.currentTimeMillis()));
+                    final DatabaseReference mRoomRef = database.getReference().child("rooms");
+                    mUserRef.child("posts").push().setValue(room).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            mRoomRef.push().setValue(room).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    mProgressBar.setVisibility(View.INVISIBLE);
+                                }
+                            });
+                        }
+                    });
+                    setResult(RESULT_OK);
+                    finish();
+                } else {
+                    Snackbar.make(layout, "Can't Connect! Check whether you're online or not!", Snackbar.LENGTH_LONG).show();
+                }
 
 
             }
@@ -94,13 +114,6 @@ public class PreviewActivity extends AppCompatActivity {
         if (!room.getAmenities().isPets())
             mPets.setVisibility(View.INVISIBLE);
 
-        Log.d(TAG, "" + room.getAvailableFor().isMen());
-        Log.d(TAG, "" + room.getAvailableFor().isWomen());
-        Log.d(TAG, "" + room.getAvailableFor().isCouple());
-        Log.d(TAG, "" + room.getAvailableFor().isStudents());
-        Log.d(TAG, "" + room.getAvailableFor().isProfessionals());
-
-
         mMen.setEnabled(room.getAvailableFor().isMen());
         mWomen.setEnabled(room.getAvailableFor().isWomen());
         mCouple.setEnabled(room.getAvailableFor().isCouple());
@@ -112,11 +125,10 @@ public class PreviewActivity extends AppCompatActivity {
         mAddress.setText(room.getAddress());
         mDesc.setText(room.getRoom_description());
 
-
         for (String s : mImageUrl) {
             DefaultSliderView sliderView = new DefaultSliderView(this);
             sliderView.image(s).setBitmapTransformation(new CenterCrop());
-            sliderLayout.addSlider(sliderView);
+            mSliderLayout.addSlider(sliderView);
         }
 
     }
@@ -124,7 +136,7 @@ public class PreviewActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         // make sure to call stopAutoCycle() on the slider before activity
-        sliderLayout.stopAutoCycle();
+        mSliderLayout.stopAutoCycle();
         super.onStop();
     }
 

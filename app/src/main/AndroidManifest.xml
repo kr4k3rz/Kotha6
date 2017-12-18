@@ -5,8 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name="com.codelite.kr4k3rz.kotha6.MyFirebaseApp"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
@@ -23,10 +25,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".view.Login.LoginActivity" />
         <activity android:name=".ListRoomActivity" />
-        <activity android:name=".SignupActivity" />
+        <activity android:name=".view.Login.SignupActivity" />
         <activity android:name=".PreviewActivity" />
+        <activity
+            android:name=".SearchableActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".FilterActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

@@ -41,20 +41,20 @@ public final class R {
         public static final int fb_useSystemFont = 0x7f0400c7;
     }
     public static final class id {
-        public static final int bottom = 0x7f090039;
-        public static final int center = 0x7f090043;
-        public static final int center_horizontal = 0x7f090044;
-        public static final int center_vertical = 0x7f090045;
-        public static final int clip_horizontal = 0x7f09004f;
-        public static final int clip_vertical = 0x7f090050;
-        public static final int end = 0x7f09006e;
-        public static final int fill = 0x7f090078;
-        public static final int fill_horizontal = 0x7f090079;
-        public static final int fill_vertical = 0x7f09007a;
-        public static final int left = 0x7f0900a8;
-        public static final int right = 0x7f0900dc;
-        public static final int start = 0x7f090115;
-        public static final int top = 0x7f09012e;
+        public static final int bottom = 0x7f09003d;
+        public static final int center = 0x7f090047;
+        public static final int center_horizontal = 0x7f090048;
+        public static final int center_vertical = 0x7f090049;
+        public static final int clip_horizontal = 0x7f090053;
+        public static final int clip_vertical = 0x7f090054;
+        public static final int end = 0x7f090071;
+        public static final int fill = 0x7f09007a;
+        public static final int fill_horizontal = 0x7f09007b;
+        public static final int fill_vertical = 0x7f09007c;
+        public static final int left = 0x7f0900ab;
+        public static final int right = 0x7f0900e1;
+        public static final int start = 0x7f09011a;
+        public static final int top = 0x7f090133;
     }
     public static final class styleable {
         public static final int[] FancyButtonsAttrs = { 0x0101000e, 0x01010095, 0x0101014f, 0x0101038c, 0x7f0400a9, 0x7f0400aa, 0x7f0400ab, 0x7f0400ac, 0x7f0400ad, 0x7f0400ae, 0x7f0400af, 0x7f0400b0, 0x7f0400b1, 0x7f0400b2, 0x7f0400b3, 0x7f0400b4, 0x7f0400b5, 0x7f0400b6, 0x7f0400b7, 0x7f0400b8, 0x7f0400b9, 0x7f0400ba, 0x7f0400bb, 0x7f0400bc, 0x7f0400bd, 0x7f0400be, 0x7f0400bf, 0x7f0400c0, 0x7f0400c1, 0x7f0400c2, 0x7f0400c3, 0x7f0400c4, 0x7f0400c5, 0x7f0400c6, 0x7f0400c7 };

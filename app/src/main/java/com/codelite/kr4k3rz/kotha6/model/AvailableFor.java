@@ -1,6 +1,8 @@
 package com.codelite.kr4k3rz.kotha6.model;
 
-public class AvailableFor {
+import java.io.Serializable;
+
+public class AvailableFor implements Serializable{
     private boolean men;
     private boolean women;
     private boolean couple;

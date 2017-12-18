@@ -1,9 +1,29 @@
 package com.codelite.kr4k3rz.kotha6.model;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Room {
+public class Room implements Serializable {
+    private String uid;
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
+    private String postId;
     private ArrayList<String> img_urls;
     private String city;
     private String address;
@@ -11,6 +31,7 @@ public class Room {
     private String available_date;
     private AvailableFor availableFor;
     private Amenities amenities;
+
 
     public Amenities getAmenities() {
         return amenities;
