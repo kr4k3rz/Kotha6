@@ -22,7 +22,7 @@
     <uses-permission android:name="com.codelite.kr4k3rz.kotha6.permission.C2D_MESSAGE" />
 
     <application
-        android:name="com.codelite.kr4k3rz.kotha6.MyFirebaseApp"
+        android:name="com.codelite.kr4k3rz.kotha6.helper.MyFirebaseApp"
         android:allowBackup="true"
         android:debuggable="true"
         android:fullBackupContent="@xml/backup_descriptor"
@@ -31,9 +31,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme.NoActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.codelite.kr4k3rz.kotha6.Application"
+            android:name="com.codelite.kr4k3rz.kotha6.helper.Application"
             android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,24 +42,21 @@
             </intent-filter>
         </activity>
         <activity android:name="com.codelite.kr4k3rz.kotha6.HomeActivity" />
-        <activity android:name="com.codelite.kr4k3rz.kotha6.view.Login.LoginActivity" />
-        <activity android:name="com.codelite.kr4k3rz.kotha6.ListRoomActivity" />
-        <activity android:name="com.codelite.kr4k3rz.kotha6.view.Login.SignupActivity" />
-        <activity android:name="com.codelite.kr4k3rz.kotha6.PreviewActivity" />
         <activity
-            android:name="com.codelite.kr4k3rz.kotha6.SearchableActivity"
-            android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
+            android:name="com.codelite.kr4k3rz.kotha6.ui.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.codelite.kr4k3rz.kotha6.ui.profile.ListRoomActivity" />
         <activity
-            android:name="com.codelite.kr4k3rz.kotha6.FilterActivity"
-            android:theme="@style/AppTheme" />
+            android:name="com.codelite.kr4k3rz.kotha6.ui.login.SignupActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.codelite.kr4k3rz.kotha6.ui.profile.PreviewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.codelite.kr4k3rz.kotha6.ui.home.SearchableActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.codelite.kr4k3rz.kotha6.ui.profile.EditProfileActivity" />
+        <activity android:name="com.codelite.kr4k3rz.kotha6.ui.profile.ManageListings" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -75,6 +72,13 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
+        <activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -116,7 +120,7 @@
             </intent-filter>
         </receiver>
         <!--
- FirebaseInstanceIdService performs security checks at runtime,
+             FirebaseInstanceIdService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service

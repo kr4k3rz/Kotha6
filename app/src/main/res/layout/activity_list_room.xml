@@ -6,55 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ListRoomActivity">
+    tools:context=".ui.profile.ListRoomActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageButton
-                    android:id="@+id/toolbar_back"
-                    style="@style/Widget.AppCompat.ActionButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_arrow_back"
-                    tools:ignore="ContentDescription" />
-
-                <TextView
-                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:text="Listings" />
-
-                <Button
-                    android:id="@+id/actionDone"
-                    style="@style/Widget.AppCompat.ActionButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/fab_margin"
-                    android:layout_marginRight="@dimen/fab_margin"
-                    android:text="NEXT"
-                    android:textStyle="bold"
-                    tools:ignore="ContentDescription" />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.Toolbar>
-
-    </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -75,7 +28,7 @@
                 android:layout_marginTop="-7dp"
                 android:indeterminate="true"
                 android:max="100"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -93,7 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
-                        android:text="Add some photos of room. "
+                        android:text="Add some photos of post. "
                         android:textStyle="bold" />
 
                     <View
@@ -457,7 +410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
-                        android:text="Write something about your room."
+                        android:text="Write something about your post."
                         android:textStyle="bold" />
 
                     <View

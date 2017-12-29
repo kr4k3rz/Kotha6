@@ -6,7 +6,7 @@
     <string name="auth_failed">authentication failed</string>
     <string name="loading">loading</string>
     <string name="apps_logo">Apps Logo</string>
-    <string name="firstName">First Name</string>
+    <string name="name">Name</string>
     <string name="lastName">Last Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -141,7 +141,9 @@
     <string name="profile">Profile</string>
     <string name="title_activity_detail_listing">DetailListingActivity</string>
     <string name="action_search">Search</string>
-    <string name="search">Search</string>
+    <string name="search">Search City </string>
     <string name="filter">Filter</string>
+    <string name="phone">Phone</string>
+    <string name="logout">Logout</string>
 
 </resources>
